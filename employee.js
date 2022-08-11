@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
 
   // Your password
   password: "Btmj06072014!",
-  database: "employeeTrackerSchema_DB"
+  database: "employeeTracker_DB"
 });
 
 connection.connect((err) => {
