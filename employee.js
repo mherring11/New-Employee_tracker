@@ -2,8 +2,7 @@ const mysql = require("mysql");
 const inquirer = require("inquirer");
 const consoleTable = require("console.table")
 
-// create the connection information for the sql database
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
   host: "localhost",
 
   // Your port; if not 3306
@@ -17,14 +16,11 @@ var connection = mysql.createConnection({
   database: "employeeTracker_DB"
 });
 
-// connect to the mysql server and sql database
 connection.connect((err) => {
   if (err) throw err;
-  // run the start function after the connection is made to prompt the user
   start();
 });
 
-// start function for application
 
 function start() {
     inquirer
@@ -45,7 +41,6 @@ function start() {
         ]
       })
       .then(function(answer) {
-        // based on their answer, either call the bid or the post functions
         if (answer.action === "View all Departments") {
           viewDepts();
         }
@@ -73,7 +68,6 @@ function start() {
       });
   }
 
-  // view departments in console
 
 function viewDepts() {
     connection.query("SELECT employee.first_name AS FirstName, employee.last_name AS LastName, department.name AS Department FROM employee JOIN role ON employee.role_id = role.id JOIN department ON role.department_id = department.id ORDER BY employee.id;",
@@ -85,7 +79,6 @@ function viewDepts() {
       });
     }
 
-  // view roles in console
 
 function viewRoles() {
     connection.query("SELECT employee.first_name AS FirstName, employee.last_name AS LastName, role.title AS Role FROM employee JOIN role ON employee.role_id = role.id;",
@@ -97,7 +90,6 @@ function viewRoles() {
         });
     }
 
-  // view employees in console
 
 function viewEmps() {
     connection.query("SELECT employee.first_name AS FirstName, employee.last_name AS LastName, role.title AS Role, department.name AS Department, CONCAT(e.first_name, ' ' ,e.last_name) AS Manager FROM employee INNER JOIN role ON role.id = employee.role_id INNER JOIN department ON department.id = role.department_id LEFT JOIN employee e on employee.manager_id = e.id;",
@@ -109,7 +101,6 @@ function viewEmps() {
         });
      }
 
-  // add department in sql
 
 function addDept() {
   connection.query(
@@ -139,7 +130,6 @@ function addDept() {
 })
 }
 
-// add role in sql
 
 function addRole() {
   connection.query(
@@ -176,7 +166,6 @@ function addRole() {
 })
 }
 
-// functions for adding employees
 
 currentRoles = [];
 currentManagers = [];
@@ -203,7 +192,6 @@ function empManager() {
     return currentManagers;
 }
 
-// update roles in sql
 
 function updateEmpRole() {
   connection.query("SELECT * FROM employee", function(err, empData) {
@@ -254,7 +242,6 @@ function updateEmpRole() {
   })
 }
 
-// add employees in sql
 
 function addEmps() {
   inquirer.prompt([
