@@ -4,7 +4,8 @@
   "description": "<p>\r     <img src=\"https://img.shields.io/badge/-JavaScript-blue\" />\r     <img src=\"https://img.shields.io/badge/mySQL-orange\"  />\r     <img src=\"https://img.shields.io/badge/npm-red\" />\r     <img src=\"https://img.shields.io/badge/-node.js-green\" />\r </p>",
   "main": "employee.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node employee.js"
   },
   "repository": {
     "type": "git",
