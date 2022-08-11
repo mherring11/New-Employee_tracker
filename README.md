@@ -11,8 +11,8 @@
 
 ## Table of Contents
 * [Description](#description)
-* [Schema](#schema)
-* [Visuals](#visuals)
+* [Installation](#installation)
+* [Usage](#usage)
 * [Walkthrough_Video](#walkthrough-video)
 * [Contributing](#contribution)
 * [Questions](#contact-information)
@@ -27,42 +27,19 @@
 As a business owner
 I want to be able to view and manage the departments, roles, and employees in my company
 So that I can organize and plan my business
+
+
 ```
+## Installation
+To install necessary dependencies, run the following command:
 
----
-  
-## Schema
+npm install
 
-<img src="media/schema.png" width="600">
+## Usage
+To run the application, input the following command:
 
-* **department**:
-
-  * **id** - INT PRIMARY KEY
-  * **name** - VARCHAR(30) to hold department name
-
-* **role**:
-
-  * **id** - INT PRIMARY KEY
-  * **title** -  VARCHAR(30) to hold role title
-  * **salary** -  DECIMAL to hold role salary
-  * **department_id** -  INT to hold reference to department role belongs to
-
-* **employee**:
-
-  * **id** - INT PRIMARY KEY
-  * **first_name** - VARCHAR(30) to hold employee first name
-  * **last_name** - VARCHAR(30) to hold employee last name
-  * **role_id** - INT to hold reference to role employee has
-  * **manager_id** - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
----
-
-## Visuals
-![image](https://user-images.githubusercontent.com/27812373/180672398-c94b4130-6de6-4362-9362-386a4fbd9a8d.png)
-![image](https://user-images.githubusercontent.com/27812373/180672408-3b6f3395-f95b-4d95-bac6-71b29a304d14.png)
-![image](https://user-images.githubusercontent.com/27812373/180672417-bd19eba7-a381-45b2-be05-c6544b39e919.png)
-
-
----
+node employeeTracker.js
+Upon pressing enter, the user will be prompted with a series of questions about their employee management system and will interact with the SQL database.
 
 ## Walkthrough Video
 
