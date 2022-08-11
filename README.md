@@ -43,7 +43,7 @@ Upon pressing enter, the user will be prompted with a series of questions about 
 
 ## Walkthrough Video
 
-[Link to walkthrough video] (https://drive.google.com/file/d/1LnuuZBzo6_DsvaVkwqo0gae_Yw2LzIVQ/view)
+[Link to walkthrough video] (https://drive.google.com/file/d/1S8nBBeKnwczKzXyTIwFlfGe1xYRuRioT/view)
 
 
 ---
