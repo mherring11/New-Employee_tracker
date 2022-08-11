@@ -1,0 +1,23 @@
+{
+  "name": "new-employee-tracker",
+  "version": "1.0.0",
+  "description": "<p>\r     <img src=\"https://img.shields.io/badge/-JavaScript-blue\" />\r     <img src=\"https://img.shields.io/badge/mySQL-orange\"  />\r     <img src=\"https://img.shields.io/badge/npm-red\" />\r     <img src=\"https://img.shields.io/badge/-node.js-green\" />\r </p>",
+  "main": "employee.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mherring11/New-Employee_tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mherring11/New-Employee_tracker/issues"
+  },
+  "homepage": "https://github.com/mherring11/New-Employee_tracker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
