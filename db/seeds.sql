@@ -1,5 +1,3 @@
-USE employeeTracker_DB;
-
 INSERT into department name VALUES ("Sales");
 INSERT into department name VALUES ("Engineering");
 INSERT into department name VALUES ("Finance");
